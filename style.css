@@ -36,7 +36,7 @@ body{
     right: 0;
     width: 100%;
     height: 100%;
-    background: red;
+    background: #0D1A35;
     animation: showRight 1s ease forwards;
     animation-delay: .4s;
 }
@@ -56,7 +56,7 @@ body{
 }
 .home{
     height: 100vh;
-    background: url('Imagenes/CodeIMG.png') no-repeat;
+    /*background: url() no-repeat;*/
     background-size: cover;
     background-position:center;
     display: flex;
@@ -67,19 +67,63 @@ body{
     max-width: 600px;
 }
 .home-content h1{
+    position: relative;
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
 }
+
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #0D1A35;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
 .home-content h3{
+    position: relative;
     font-size: 32px;
     font-weight: 700;
     color: #00abf0;
 }
+
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #0D1A35;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
 .home-content p{
+    position: relative;
     font-size: 16px;
     margin: 20px 0 40px;
 }
+
+
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #0D1A35;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+
 .home-content .btn-box {
     display: flex;
     justify-content: space-between;
