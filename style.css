@@ -6,7 +6,7 @@
     font-family: 'Poppins',sans-serif;
 }
 body{
-    background: #081b29;
+    
     color: #ededed;
 }
 .header{
@@ -22,11 +22,25 @@ body{
     z-index: 100;
 }
 .logo{
+    position: relative;
     font-size: 25px;
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
 }
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
 .navbar a {
     font-size: 18px;
     color: #ededed;
@@ -42,7 +56,9 @@ body{
 }
 .home{
     height: 100vh;
-    background: url('Imagenes\CodeIMG.png');
+    background: url('Imagenes/CodeIMG.png') no-repeat;
+    background-size: cover;
+    background-position:center;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -166,4 +182,24 @@ body{
 .home-sci a:hover::before{
 width: 100%;
 
+}
+
+.home-imgHover{
+    position: absolute;
+    right: 30px;
+    width: 657px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+.home-imgHover:hover{
+    background: #0D1A35;
+    opacity: .8;
+}
+/*KEYFRAMES ANIMATION*/
+
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
 }
